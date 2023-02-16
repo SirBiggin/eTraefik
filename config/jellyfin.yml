@@ -19,26 +19,28 @@ http:
           UpdateInterval: "3600"
 
 
-#  routers:
-#    to-jellyfin-Coitus:
-#      rule: "Host(`jellyfin.coitus.io`)"
-#      middlewares:
-#        - log4shell
-#        - torblock
-#      service: jellyfin
-        
-
-      
-    to-jellyfin-Coitus-secure:
+  routers:
+    to-jellyfin-Coitus:
+      entrypoints: 
+      - http
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - log4shell
         - torblock
         - https_redirect
-      service: jellyfin
+        
+
       
-#      tls:
-#        certResolver: letsencrypt
+    to-jellyfin-Coitus-secure:
+      entrypoints: 
+      - https
+      rule: "Host(`jellyfin.coitus.io`)"
+      middlewares:
+        - log4shell
+        - torblock
+      service: jellyfin
+     tls:
+       certResolver: letsencrypt
 
         
 
