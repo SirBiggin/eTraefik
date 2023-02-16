@@ -1,7 +1,7 @@
 ---
 http:
   middlewares:
-    log4shell-foo:
+    log4shell:
       plugin:
         log4shell:
           errorCode: 200
@@ -20,8 +20,8 @@ http:
       entryPoints:
         - web
       middlewares:
-        - log4shell-foo
-        - my-torblock
+        - log4shell
+        - torblock
       service: jellyfin
         
 
