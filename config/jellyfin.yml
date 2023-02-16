@@ -13,14 +13,6 @@ http:
           Enabled: "true"
           UpdateInterval: "3600"
 
-    redirect:
-      plugin:
-        redirect:
-          redirectScheme:
-            scheme: https
-            permanent: true
-            port: "443"
-
 
 #  routers:
 #    to-jellyfin-Coitus:
@@ -28,7 +20,6 @@ http:
 #      middlewares:
 #        - log4shell
 #        - torblock
-#        - https-redirect
 #      service: jellyfin
         
 
@@ -38,20 +29,15 @@ http:
       middlewares:
         - log4shell
         - torblock
+        https_redirect:
+          redirectScheme:
+            scheme: https
+            permanent: true
       service: jellyfin
       
 #      tls:
 #        certResolver: letsencrypt
 
-#    to-jellyfin-8bitshit:
-#      rule: "Host(`jellyfin.8bitshit.com`)"
-#      service: jellyfin
-
-#    to-jellyfin-8bitshit-secure:
-#      rule: "Host(`jellyfin.8bitshit.com`)"
-#      service: jellyfin
-#      tls:
-#        certResolver: letsencrypt
         
 
         
