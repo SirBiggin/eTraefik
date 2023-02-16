@@ -4,6 +4,16 @@ http:
     to-jellyfin-Coitus:
       rule: "Host(`jellyfin.coitus.io`)"
       service: jellyfin
+      middlewares:
+        my-torblock:
+          plugin:
+            torblock:
+              AddressListURL: https://check.torproject.org/exit-addresses
+              UpdateInterval: "3600"
+        my-plugin-log4shell:
+          plugin:
+            plugin-log4shell:
+              errorCode: "200"
       
     to-jellyfin-Coitus-secure:
       rule: "Host(`jellyfin.coitus.io`)"
@@ -21,18 +31,7 @@ http:
 #      tls:
 #        certResolver: letsencrypt
         
-  middlewares:
-    my-torblock:
-      plugin:
-        torblock:
-          AddressListURL: https://check.torproject.org/exit-addresses
-          Enabled: "true"
-          UpdateInterval: "3600"
-          
-    my-plugin-log4shell:
-      plugin:
-        plugin-log4shell:
-          errorCode: "200"
+
         
   services:
     jellyfin:
