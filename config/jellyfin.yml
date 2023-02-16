@@ -6,7 +6,7 @@ http:
         log4shell:
           errorCode: 200
 
-    my-torblock:
+    torblock:
       plugin:
         torblock:
           AddressListURL: https://check.torproject.org/exit-addresses
