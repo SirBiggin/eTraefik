@@ -14,13 +14,13 @@ global:
   checkNewVersion: true
   sendAnonymousUsage: true
     
-certificatesResolvers:
-  letsencrypt:
-    acme:
-      email: "Eric.G.Greene@hotmail.com"
-      storage: /etc/etraefik/certs/acme.json
-      httpChallenge:
-        entryPoint: http
+#certificatesResolvers:
+#  letsencrypt:
+#    acme:
+#      email: "Eric.G.Greene@hotmail.com"
+#      storage: /etc/etraefik/certs/acme.json
+#      httpChallenge:
+#        entryPoint: http
 
 providers:
   file:

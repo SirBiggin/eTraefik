@@ -27,7 +27,7 @@ http:
       middlewares:
         - log4shell
         - torblock
-        - https_redirect
+#        - https_redirect
       service: jellyfin
 
     to-jellyfin-Coitus-secure:
@@ -38,8 +38,8 @@ http:
         - log4shell
         - torblock
       service: jellyfin
-      tls:
-        certResolver: letsencrypt
+#      tls:
+#        certResolver: letsencrypt
 
         
 
