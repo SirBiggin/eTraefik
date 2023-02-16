@@ -17,10 +17,12 @@ http:
   routers:
     to-jellyfin-Coitus:
       rule: "Host(`jellyfin.coitus.io`)"
-      service: jellyfin
+      entryPoints:
+        - web
       middlewares:
         - log4shell-foo
         - my-torblock
+      service: jellyfin
         
 
       
