@@ -1,6 +1,11 @@
 ---
 http:
   middlewares:
+    https_redirect:
+      redirectScheme:
+        scheme: https
+        permanent: true
+        
     log4shell:
       plugin:
         log4shell:
