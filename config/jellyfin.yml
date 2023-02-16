@@ -13,9 +13,10 @@ http:
           Enabled: "true"
           UpdateInterval: "3600"
 
-    https-redirect:
+    https_redirect:
       redirectScheme:
         scheme: https
+        permanent: true
 
 
 #  routers:
@@ -35,7 +36,7 @@ http:
       middlewares:
         - log4shell
         - torblock
-        - https-redirect
+        - https_redirect
 #      tls:
 #        certResolver: letsencrypt
 
