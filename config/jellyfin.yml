@@ -13,6 +13,10 @@ http:
           Enabled: "true"
           UpdateInterval: "3600"
 
+    https-redirect:
+      redirectScheme:
+        scheme: https
+
 
 #  routers:
 #    to-jellyfin-Coitus:
