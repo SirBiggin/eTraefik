@@ -13,10 +13,11 @@ http:
           Enabled: "true"
           UpdateInterval: "3600"
 
-    https_redirect:
+    redirect:
       redirectScheme:
         scheme: https
         permanent: true
+        port: "443"
 
 
 #  routers:
@@ -32,11 +33,12 @@ http:
       
     to-jellyfin-Coitus-secure:
       rule: "Host(`jellyfin.coitus.io`)"
-      service: jellyfin
       middlewares:
+        - redirect
         - log4shell
         - torblock
-        - https_redirect
+      service: jellyfin
+      
 #      tls:
 #        certResolver: letsencrypt
 
