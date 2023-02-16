@@ -43,8 +43,8 @@ http:
         
 
         
-  services:
-    jellyfin:
-      loadBalancer:
-        servers:
-          - url: http://10.0.1.6:8096
+    services:
+      jellyfin:
+        loadBalancer:
+          servers:
+            - url: http://10.0.1.6:8096
