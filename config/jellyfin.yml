@@ -29,7 +29,7 @@ http:
       middlewares:
         - log4shell
         - torblock
-        - https_redirect@file
+        - https_redirect
       service: jellyfin
       
 #      tls:
