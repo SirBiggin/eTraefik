@@ -17,8 +17,6 @@ http:
   routers:
     to-jellyfin-Coitus:
       rule: "Host(`jellyfin.coitus.io`)"
-      entryPoints:
-        - web
       middlewares:
         - log4shell
         - torblock
@@ -29,6 +27,9 @@ http:
     to-jellyfin-Coitus-secure:
       rule: "Host(`jellyfin.coitus.io`)"
       service: jellyfin
+      middlewares:
+        - log4shell
+        - torblock
 #      tls:
 #        certResolver: letsencrypt
 
