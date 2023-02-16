@@ -14,10 +14,12 @@ http:
           UpdateInterval: "3600"
 
     redirect:
-      redirectScheme:
-        scheme: https
-        permanent: true
-        port: "443"
+      plugin:
+        redirect:
+          redirectScheme:
+            scheme: https
+            permanent: true
+            port: "443"
 
 
 #  routers:
