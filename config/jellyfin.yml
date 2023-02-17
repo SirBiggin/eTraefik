@@ -1,22 +1,5 @@
 ---
 http:
-#  middlewares:
-#    https_redirect:
-#      redirectScheme:
-#        scheme: https
-#        permanent: true
-#        
-#    log4shell:
-#      plugin:
-#        log4shell:
-#          errorCode: 200
-#
-#    torblock:
-#      plugin:
-#        torblock:
-#          AddressListURL: https://check.torproject.org/exit-addresses
-#          Enabled: "true"
-#          UpdateInterval: "3600"
 
 
   routers:
@@ -25,7 +8,7 @@ http:
       - http
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
-#        - log4shell
+        - secured@file
 #        - torblock
 #        - https_redirect
       service: jellyfin
@@ -35,6 +18,7 @@ http:
       - https
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
+        - secured@file
 #        - log4shell
 #        - torblock
       service: jellyfin
