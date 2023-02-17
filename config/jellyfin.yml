@@ -10,7 +10,7 @@ http:
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
-      service: jellyfin
+      service: jellyfin-http
 
 
     to-jellyfin-Coitus-secure:
@@ -19,7 +19,7 @@ http:
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
-      service: jellyfin
+      service: jellyfin-https
 #      tls:
 #        certResolver: letsencrypt
 
