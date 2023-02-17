@@ -32,8 +32,7 @@ certificatesResolvers:
       acme:
         email: "Eric.G.Greene@hotmail.com"
         dnsChallenge:
-          provider: 
-          - cloudflare
+          provider: "cloudflare"
 #            resolvers:
 #              - 1.1.1.1:53
 #              - 8.8.8.8:53
