@@ -29,10 +29,10 @@ providers:
 
 experimental:
   plugins:
-    torblock:
-      moduleName: "github.com/jpxd/torblock"
-      version: "v0.1.1"
+#    torblock:
+#      moduleName: "github.com/jpxd/torblock"
+#      version: "v0.1.1"
       
-    log4shell:
-      moduleName: "github.com/traefik/plugin-log4shell"
-      version: "v0.1.2"
+#    log4shell:
+#      moduleName: "github.com/traefik/plugin-log4shell"
+#      version: "v0.1.2"

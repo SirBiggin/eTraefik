@@ -27,12 +27,12 @@ http:
 #        log4shell:
 #          errorCode: 200
 
-    torblock:
-      plugin:
-        torblock:
-          AddressListURL: https://check.torproject.org/exit-addresses
-          Enabled: "true"
-          UpdateInterval: "3600"
+#    torblock:
+#      plugin:
+#        torblock:
+#          AddressListURL: https://check.torproject.org/exit-addresses
+#          Enabled: "true"
+#          UpdateInterval: "3600"
           
     secured:
       chain:
@@ -40,4 +40,4 @@ http:
 #        - default-whitelist
 #        - default-headers
 #        - log4shell
-        - torblock
+#        - torblock
