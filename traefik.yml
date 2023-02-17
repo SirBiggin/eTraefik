@@ -28,11 +28,11 @@ certificatesResolvers:
       httpChallenge:
         entryPoint: http
       
-    Cloudflare-Resolver:
-      acme:
-        email: "Eric.G.Greene@hotmail.com"
-        dnsChallenge:
-          provider: "cloudflare"
+  Cloudflare-Resolver:
+    acme:
+      email: "Eric.G.Greene@hotmail.com"
+      dnsChallenge:
+        provider: "cloudflare"
 #            resolvers:
 #              - 1.1.1.1:53
 #              - 8.8.8.8:53
