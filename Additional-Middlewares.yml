@@ -17,8 +17,27 @@ http:
         - "192.168.0.0/16"
         - "172.0.0.0/8"
 
+#    https_redirect:
+#      redirectScheme:
+#        scheme: https
+#        permanent: true
+        
+    log4shell:
+      plugin:
+        log4shell:
+          errorCode: 200
+
+    torblock:
+      plugin:
+        torblock:
+          AddressListURL: https://check.torproject.org/exit-addresses
+          Enabled: "true"
+          UpdateInterval: "3600"
+          
     secured:
       chain:
         middlewares:
         - default-whitelist
         - default-headers
+        - log4shell
+        - torblock

@@ -1,22 +1,22 @@
 ---
 http:
-  middlewares:
-    https_redirect:
-      redirectScheme:
-        scheme: https
-        permanent: true
-        
-    log4shell:
-      plugin:
-        log4shell:
-          errorCode: 200
-
-    torblock:
-      plugin:
-        torblock:
-          AddressListURL: https://check.torproject.org/exit-addresses
-          Enabled: "true"
-          UpdateInterval: "3600"
+#  middlewares:
+#    https_redirect:
+#      redirectScheme:
+#        scheme: https
+#        permanent: true
+#        
+#    log4shell:
+#      plugin:
+#        log4shell:
+#          errorCode: 200
+#
+#    torblock:
+#      plugin:
+#        torblock:
+#          AddressListURL: https://check.torproject.org/exit-addresses
+#          Enabled: "true"
+#          UpdateInterval: "3600"
 
 
   routers:
@@ -25,8 +25,9 @@ http:
       - http
       rule: "Host(`plexia.coitus.io`)"
       middlewares:
-        - log4shell
-        - torblock
+        - secured@file
+#        - log4shell
+#        - torblock
 #        - https_redirect
       service: plexia
 
@@ -35,8 +36,9 @@ http:
       - https
       rule: "Host(`plexia.coitus.io`)"
       middlewares:
-        - log4shell
-        - torblock
+        - secured@file
+#        - log4shell
+#        - torblock
       service: plexia
 #      tls:
 #        certResolver: letsencrypt
