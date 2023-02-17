@@ -8,7 +8,7 @@ http:
       - http
       rule: "Host(`plexia.coitus.io`)"
       middlewares:
-        - secured@file
+#        - secured@file
       service: plexia
 
     to-plexia-Coitus-secure:
@@ -16,7 +16,7 @@ http:
       - https
       rule: "Host(`plexia.coitus.io`)"
       middlewares:
-        - secured@file
+#        - secured@file
       service: plexia
 #      tls:
 #        certResolver: letsencrypt
