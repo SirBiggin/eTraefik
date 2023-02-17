@@ -11,13 +11,13 @@ http:
         - secured@file
       service: jellyfin
 
-    to-jellyfin-Coitus-secure:
-      entrypoints: 
-      - https
-      rule: "Host(`jellyfin.coitus.io`)"
-      middlewares:
-        - secured@file
-      service: jellyfin
+#    to-jellyfin-Coitus-secure:
+#      entrypoints: 
+#      - https
+#      rule: "Host(`jellyfin.coitus.io`)"
+#      middlewares:
+#        - secured@file
+#      service: jellyfin
 #      tls:
 #        certResolver: letsencrypt
         
