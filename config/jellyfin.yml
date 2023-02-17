@@ -40,9 +40,6 @@ http:
       service: jellyfin
 #      tls:
 #        certResolver: letsencrypt
-
-        
-
         
   services:
     jellyfin:
