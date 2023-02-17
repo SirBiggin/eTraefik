@@ -13,7 +13,7 @@ http:
 
     to-plexia-Coitus-secure:
       entrypoints: 
-      - https
+#      - https
       rule: "Host(`plexia.coitus.io`)"
       middlewares:
 #        - secured@file
