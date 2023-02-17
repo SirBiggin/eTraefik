@@ -27,8 +27,8 @@ providers:
     directory: /etc/etraefik/config
     watch: true
 
-experimental:
-  plugins:
+#experimental:
+#  plugins:
 #    torblock:
 #      moduleName: "github.com/jpxd/torblock"
 #      version: "v0.1.1"
