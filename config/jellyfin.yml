@@ -4,7 +4,7 @@ http:
     https_redirect:
       redirectScheme:
         scheme: https
-#        permanent: true
+        permanent: true
         
     log4shell:
       plugin:
