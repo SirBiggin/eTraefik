@@ -25,7 +25,7 @@ certificatesResolvers:
 #      storage: /etc/etraefik/certs/acme.json
 #      httpChallenge:
 #        entryPoint: http
-  letsencrypt-staging:
+  letsencryptStaging:
     acme:
       email: "Eric.G.Greene@hotmail.com"
       storage: /etc/etraefik/certs/acme.json
@@ -33,16 +33,16 @@ certificatesResolvers:
       httpChallenge:
         entryPoint: http
       
-  cloudflare-resolver:
-    acme:
-      email: "Eric.G.Greene@hotmail.com"
-      storage: /etc/etraefik/certs/acme.json
-      dnsChallenge:
-        provider: "cloudflare"
-          CF_API_EMAIL: 
-            - Eric.G.Greene@hotmail.com
-          CF_API_KEY: 
-            - A4xck34t7BOS3Ju8vIzUfN0QGhM50SqI55go7UyZ
+#  cloudflare-resolver:
+#    acme:
+#      email: "Eric.G.Greene@hotmail.com"
+#      storage: /etc/etraefik/certs/acme.json
+#      dnsChallenge:
+#        provider: "cloudflare"
+#          CF_API_EMAIL: 
+#            - Eric.G.Greene@hotmail.com
+#          CF_API_KEY: 
+#            - A4xck34t7BOS3Ju8vIzUfN0QGhM50SqI55go7UyZ
 #            resolvers:
 #              - 1.1.1.1:53
 #              - 8.8.8.8:53

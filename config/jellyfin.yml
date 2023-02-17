@@ -1,8 +1,6 @@
 ---
 http:
-
   routers:
-
     to-jellyfin-Coitus-secure:
       entryPoints:
         - http
@@ -12,7 +10,7 @@ http:
         - secured@file
       service: jellyfin
       tls:
-        certResolver: cloudflare-resolver
+        certResolver: letsencryptStaging
 
 
   services:
