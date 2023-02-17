@@ -4,33 +4,38 @@ http:
 
   routers:
 
-    to-jellyfin-Coitus:
-      entrypoints: 
-      - http
-      rule: "Host(`jellyfin.coitus.io`)"
-      middlewares:
-        - secured@file
-      service: jellyfin-http
+#    to-jellyfin-Coitus:
+#      entrypoints: 
+#      - http
+#      rule: "Host(`jellyfin.coitus.io`)"
+#      middlewares:
+#        - secured@file
+#      service: jellyfin-http
 
 
     to-jellyfin-Coitus-secure:
       entrypoints: 
+      - http
       - https
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
-      service: jellyfin-https
+      service: jellyfin
       tls:
         certResolver: letsencrypt-staging
 
 
   services:
-    jellyfin-http:
+    jellyfin:
       loadBalancer:
         servers:
           - url: http://10.0.1.6:8096
-
-    jellyfin-https:
-      loadBalancer:
-        servers:
-          - url: https://10.0.1.6:8096
+#    jellyfin-http:
+#      loadBalancer:
+#        servers:
+#          - url: http://10.0.1.6:8096
+#
+#    jellyfin-https:
+#      loadBalancer:
+#        servers:
+#          - url: https://10.0.1.6:8096
