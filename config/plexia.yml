@@ -45,4 +45,4 @@ http:
     plexia:
       loadBalancer:
         servers:
-          - url: url: http://10.0.1.5:32400
+          - url:http://10.0.1.5:32400
