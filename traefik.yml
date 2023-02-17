@@ -28,10 +28,10 @@ certificatesResolvers:
       httpChallenge:
         entryPoint: http
       
-  Cloudflare-Resolver:
+  cloudflare-resolver:
     acme:
-      storage: /etc/etraefik/certs/acme.json
       email: "Eric.G.Greene@hotmail.com"
+      storage: /etc/etraefik/certs/acme.json
       dnsChallenge:
         provider: "cloudflare"
 #            resolvers:
