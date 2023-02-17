@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /etc/etraefik/
-./traefik --configFile=traefik.yml
+sudo cd /etc/etraefik/
+sudo ./traefik --configFile=traefik.yml
