@@ -9,8 +9,6 @@ http:
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
-#        - torblock
-#        - https_redirect
       service: jellyfin
 
     to-jellyfin-Coitus-secure:
@@ -19,8 +17,6 @@ http:
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
-#        - log4shell
-#        - torblock
       service: jellyfin
 #      tls:
 #        certResolver: letsencrypt
