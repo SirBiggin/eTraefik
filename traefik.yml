@@ -27,11 +27,11 @@ providers:
     directory: /etc/etraefik/config
     watch: true
 
-#experimental:
-#  plugins:
-#    torblock:
-#      moduleName: "github.com/jpxd/torblock"
-#      version: "v0.1.1"
+experimental:
+  plugins:
+    torblock:
+      moduleName: "github.com/jpxd/torblock"
+      version: "v0.1.1"
       
 #    log4shell:
 #      moduleName: "github.com/traefik/plugin-log4shell"
