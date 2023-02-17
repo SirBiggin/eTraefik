@@ -17,10 +17,10 @@ http:
 #        - "192.168.0.0/16"
 #        - "172.0.0.0/8"
 
-    https_redirect:
-      redirectScheme:
-        scheme: https
-        permanent: true
+#    https_redirect:
+#      redirectScheme:
+#        scheme: https
+#        permanent: true
         
     log4shell:
       plugin:
@@ -41,4 +41,4 @@ http:
 #        - default-headers
         - log4shell
         - torblock
-        - https_redirect
+#        - https_redirect
