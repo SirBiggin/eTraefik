@@ -10,12 +10,12 @@ http:
         stsIncludeSubdomains: true
         stsPreload: true
 
-#    default-whitelist:
-#      ipWhiteList:
-#        sourceRange:
-#       - "10.0.0.0/24"
-#        - "192.168.0.0/16"
-#        - "172.0.0.0/8"
+    default-whitelist:
+      ipWhiteList:
+        sourceRange:
+       - "10.0.0.0/24"
+        - "192.168.0.0/16"
+        - "172.0.0.0/8"
 
 #    https_redirect:
 #      redirectScheme:
@@ -37,7 +37,7 @@ http:
     secured:
       chain:
         middlewares:
-        - default-whitelist
+#        - default-whitelist
 #        - default-headers
         - log4shell
         - torblock
