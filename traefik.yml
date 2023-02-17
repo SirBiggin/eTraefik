@@ -30,6 +30,7 @@ certificatesResolvers:
       
   Cloudflare-Resolver:
     acme:
+      storage: /etc/etraefik/certs/acme.json
       email: "Eric.G.Greene@hotmail.com"
       dnsChallenge:
         provider: "cloudflare"
