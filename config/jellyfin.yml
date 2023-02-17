@@ -8,7 +8,7 @@ http:
       - http
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
-#        - secured@file
+        - secured@file
       service: jellyfin
 
 #    to-jellyfin-Coitus-secure:
