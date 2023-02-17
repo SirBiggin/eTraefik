@@ -4,15 +4,15 @@ http:
   routers:
 
     to-jellyfin-Coitus-secure:
-#      entryPoints:
-#        - http
-#        - https
+      entryPoints:
+        - http
+        - https
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
       service: jellyfin
       tls:
-        certResolver: letsencrypt-staging
+        certResolver: cloudflare-resolver
 
 
   services:
