@@ -13,13 +13,27 @@ global:
   checkNewVersion: true
   sendAnonymousUsage: false
     
-#certificatesResolvers:
-#  letsencrypt:
+certificatesResolvers:
+#  letsencrypt-prod:
 #    acme:
 #      email: "Eric.G.Greene@hotmail.com"
 #      storage: /etc/etraefik/certs/acme.json
 #      httpChallenge:
 #        entryPoint: http
+  letsencrypt-staging:
+    acme:
+      email: "Eric.G.Greene@hotmail.com"
+      storage: /etc/etraefik/certs/acme.json
+      caServer: https://acme-staging-v02.api.letsencrypt.org/directory
+      httpChallenge:
+        entryPoint: http
+      
+    Cloudflare-Resolver:
+    acme:
+      dnsChallenge:
+        provider: cloudflare
+          CF_API_KEY: "A4xck34t7BOS3Ju8vIzUfN0QGhM50SqI55go7UyZ"
+          
 
 providers:
   file:

@@ -20,8 +20,8 @@ http:
       middlewares:
         - secured@file
       service: jellyfin-https
-#      tls:
-#        certResolver: letsencrypt
+      tls:
+        certResolver: letsencrypt-staging
 
 
   services:
