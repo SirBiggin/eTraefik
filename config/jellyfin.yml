@@ -9,7 +9,7 @@ http:
       - http
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
-        - https_redirect@file
+#        - https_redirect@file
       service: jellyfin
 
 
