@@ -25,7 +25,12 @@ http:
 #        certResolver: letsencrypt
         
   services:
-    jellyfin:
+    jellyfin-http:
       loadBalancer:
         servers:
-          - url: 10.0.1.6:8096/
+          - url: http://10.0.1.6:8096
+
+    jellyfin-https:
+      loadBalancer:
+        servers:
+          - url: https://10.0.1.6:8096
