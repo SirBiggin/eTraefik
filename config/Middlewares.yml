@@ -34,9 +34,9 @@
           Enabled: "true"
           UpdateInterval: "3600"
           
-#    secured:
-#      chain:
-#        middlewares:
+    secured:
+      chain:
+        middlewares:
 #        - default-whitelist
 #        - default-headers
         - log4shell
