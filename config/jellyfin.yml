@@ -3,16 +3,19 @@ http:
 
 
   routers:
-    to-jellyfin-Coitus:
-      entrypoints: 
-      - http
-      rule: "Host(`jellyfin.coitus.io`)"
-      middlewares:
-        - secured@file
-      service: jellyfin
+
+#    to-jellyfin-Coitus:
+#      entrypoints: 
+#      - http
+#      - https
+#      rule: "Host(`jellyfin.coitus.io`)"
+#      middlewares:
+#        - secured@file
+#      service: jellyfin
 
     to-jellyfin-Coitus-secure:
       entrypoints: 
+      - http
       - https
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
