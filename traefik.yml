@@ -11,7 +11,7 @@ api:
     
 global:
   checkNewVersion: true
-  sendAnonymousUsage: true
+  sendAnonymousUsage: false
     
 #certificatesResolvers:
 #  letsencrypt:
