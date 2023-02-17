@@ -31,11 +31,12 @@ certificatesResolvers:
     Cloudflare-Resolver:
       acme:
         email: "Eric.G.Greene@hotmail.com"
-        dnsChallenge: true
-          provider: cloudflare
-            resolvers:
-              - 1.1.1.1:53
-              - 8.8.8.8:53
+        dnsChallenge:
+          provider: 
+          - cloudflare
+#            resolvers:
+#              - 1.1.1.1:53
+#              - 8.8.8.8:53
 #          CF_API_KEY: "A4xck34t7BOS3Ju8vIzUfN0QGhM50SqI55go7UyZ"
           
           
