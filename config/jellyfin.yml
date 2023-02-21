@@ -2,8 +2,8 @@
 http:
   routers:
     to-jellyfin-Coitus-secure:
-      entryPoints:
-        - http
+#      entryPoints:
+#        - http
 #        - https
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
@@ -13,8 +13,8 @@ http:
 #        certResolver: letsencryptStaging
 
     to-jellyfin-Coitus-Local-secure:
-      entryPoints:
-        - http
+#      entryPoints:
+#        - http
 #        - https
       rule: "Host(`jellyfin.coitus.local`)"
       middlewares:
