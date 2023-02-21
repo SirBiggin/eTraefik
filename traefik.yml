@@ -20,16 +20,16 @@ global:
   
 # (Optional) Log information
 # ---
-  log:
-    level: DEBUG  # DEBUG, INFO, WARNING, ERROR, CRITICAL
-      format: common  # common, json, logfmt
-      filePath: /etc/etraefik/traefik.log
+ log:
+  level: DEBUG  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+    format: common  # common, json, logfmt
+    filePath: /etc/etraefik/traefik.log
 
 # (Optional) Accesslog
 # ---
-  accesslog:
-     format: common  # common, json, logfmt
-     filePath: /etc/etraefik/access.log
+ accesslog:
+   format: common  # common, json, logfmt
+   filePath: /etc/etraefik/access.log
     
 certificatesResolvers:
 #  production:
