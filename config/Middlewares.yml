@@ -38,7 +38,7 @@ http:
       chain:
         middlewares:
 #        - default-whitelist
-#        - default-headers
+        - default-headers
         - log4shell
         - torblock
 #        - https_redirect
