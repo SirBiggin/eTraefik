@@ -1,12 +1,5 @@
 ---
-
-
 http:
-  entryPoints:
-    http:
-      address: :80
-    https:
-      address: :443
   routers:
     to-jellyfin-Coitus-secure:
       entryPoints:

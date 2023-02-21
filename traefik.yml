@@ -2,12 +2,15 @@
 entryPoints:
   ssl-http:
     address: :80
+  http:
+    address: :80
 #    http:
 #      redirections:
 #        entryPoint:
 #          to: https
 #          scheme: https
-
+  https:
+    address: :443
     
 api:
   insecure: true
