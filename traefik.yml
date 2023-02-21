@@ -1,7 +1,5 @@
 ---
 entryPoints:
-  ssl-http:
-    address: :80
   http:
     address: :80
 #    http:
