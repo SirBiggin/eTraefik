@@ -9,8 +9,8 @@ http:
       middlewares:
         - secured@file
       service: jellyfin
-#      tls:
-#        certResolver: letsencryptStaging
+      tls:
+        certResolver: letsencryptStaging
 
     to-jellyfin-Coitus-Local-secure:
 #      entryPoints:
