@@ -1,14 +1,13 @@
 ---
 entryPoints:
-  http:
+  ssl-http:
     address: :80
-    http:
-      redirections:
-        entryPoint:
-          to: https
-          scheme: https
-  https:
-    address: :443
+#    http:
+#      redirections:
+#        entryPoint:
+#          to: https
+#          scheme: https
+
     
 api:
   insecure: true
@@ -24,14 +23,14 @@ certificatesResolvers:
 #      email: "Eric.G.Greene@hotmail.com"
 #      storage: /etc/etraefik/certs/acme.json
 #      httpChallenge:
-#        entryPoint: http
+#        entryPoint: ssl-http
   letsencryptStaging:
     acme:
       email: "Eric.G.Greene@hotmail.com"
       storage: /etc/etraefik/certs/acme.json
       caServer: https://acme-staging-v02.api.letsencrypt.org/directory
       httpChallenge:
-        entryPoint: http
+        entryPoint: ssl-http
       
 #  cloudflare-resolver:
 #    acme:
