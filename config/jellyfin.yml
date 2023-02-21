@@ -1,12 +1,16 @@
 ---
+entryPoints:
+  http:
+    address: :80
+  https:
+    address: :443
+
 http:
   routers:
     to-jellyfin-Coitus-secure:
       entryPoints:
-          http:
-            address: :80
-          https:
-            address: :443
+        - http
+        - https
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
