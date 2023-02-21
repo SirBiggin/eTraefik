@@ -12,6 +12,17 @@ http:
 #      tls:
 #        certResolver: letsencryptStaging
 
+    to-jellyfin-Coitus-Local-secure:
+      entryPoints:
+        - http
+#        - https
+      rule: "Host(`jellyfin.coitus.local`)"
+      middlewares:
+        - secured@file
+      service: jellyfin
+#      tls:
+#        certResolver: letsencryptStaging
+
 
   services:
     jellyfin:
