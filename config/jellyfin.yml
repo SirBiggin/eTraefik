@@ -4,7 +4,7 @@ http:
     to-jellyfin-Coitus-secure:
       entryPoints:
         - http
-        - https
+#        - https
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
