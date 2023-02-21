@@ -6,8 +6,10 @@ cd /etc/
 git clone https://github.com/SirBiggin/etraefik
 cd /etc/etraefik/
 sudo mkdir -p /etc/etraefik/certs
-sudo touch /etc/etraefik/certs/acme.json
-sudo chmod 600 /etc/etraefik/certs/acme.json
+sudo touch /etc/etraefik/certs/prod-acme.json
+sudo chmod 600 /etc/etraefik/certs/prod-acme.json
+sudo touch /etc/etraefik/certs/non-prod-acme.json
+sudo chmod 600 /etc/etraefik/certs/non-prod-acme.json
 cd /etc/etraefik/
 ls - l ./run.sh
 sudo chmod 774 ./run.sh

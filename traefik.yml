@@ -1,13 +1,13 @@
 ---
 entryPoints:
-  http:
+  web:
     address: :80
 #    http:
 #      redirections:
 #        entryPoint:
 #          to: https
 #          scheme: https
-  https:
+  websecure:
     address: :443
     
 api:
@@ -17,22 +17,35 @@ api:
 global:
   checkNewVersion: true
   sendAnonymousUsage: false
+  
+# (Optional) Log information
+# ---
+log:
+  level: DEBUG  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+    format: common  # common, json, logfmt
+    filePath: /etc/etraefik/traefik.log
+
+# (Optional) Accesslog
+# ---
+accesslog:
+   format: common  # common, json, logfmt
+   filePath: /etc/etraefik/access.log
     
 certificatesResolvers:
-#  letsencrypt-prod:
+#  production:
 #    acme:
-#      email: "Eric.G.Greene@hotmail.com"
-#      storage: /etc/etraefik/certs/acme.json
+#      email: Eric.G.Greene@hotmail.com
+#      storage: /etc/etraefik/certs/prod-acme.json
 #      httpChallenge:
-#        entryPoint: ssl-http
-  letsencryptStaging:
+#        entryPoint: web
+  staging:
     acme:
-      email: "Eric.G.Greene@hotmail.com"
-      storage: /etc/etraefik/certs/acme.json
-      caServer: https://acme-staging-v02.api.letsencrypt.org/directory
+      email: Eric.G.Greene@hotmail.com
+      storage: /etc/etraefik/certs/non-prod-acme.json
+      caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
       httpChallenge:
-        entryPoint: http
-      
+        entryPoint: web
+
 #  cloudflare-resolver:
 #    acme:
 #      email: "Eric.G.Greene@hotmail.com"
@@ -46,6 +59,50 @@ certificatesResolvers:
 #            resolvers:
 #              - 1.1.1.1:53
 #              - 8.8.8.8:53
+
+
+
+
+
+
+
+# Configure your CertificateResolver here...
+# ---
+# certificatesResolvers:
+#   staging:
+#     acme:
+#       email: your-email@example.com
+#       storage: /etc/traefik/certs/acme.json
+#       caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
+#       httpChallenge:
+#         entryPoint: web
+#
+#   production:
+#     acme:
+#       email: your-email@example.com
+#       storage: /etc/traefik/certs/acme.json
+#       caServer: "https://acme-v02.api.letsencrypt.org/directory"
+#       httpChallenge:
+#         entryPoint: web
+
+# (Optional) Overwrite Default Certificates
+# tls:
+#   stores:
+#     default:
+#       defaultCertificate:
+#         certFile: /etc/traefik/certs/cert.pem
+#         keyFile: /etc/traefik/certs/cert-key.pem
+# (Optional) Disable TLS version 1.0 and 1.1
+#   options:
+#     default:
+#       minVersion: VersionTLS12
+
+
+
+
+
+
+
           
           
 
