@@ -2,9 +2,9 @@
 http:
   routers:
     to-jellyfin-Coitus-secure:
-      entryPoints:
-        - http
-        - https
+#      entryPoints:
+#        - http
+#        - https
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
         - secured@file
