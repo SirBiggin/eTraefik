@@ -6,7 +6,10 @@ cd /etc/
 git clone https://github.com/SirBiggin/etraefik
 cd /etc/etraefik/
 sudo mkdir -p /etc/etraefik/certs
+sudo mkdir -p /var/log/traefik
 sudo touch /etc/etraefik/certs/prod-acme.json
+sudo touch /var/log/traefik/traefik.log
+sudo touch /var/log/traefik/access.log
 sudo chmod 600 /etc/etraefik/certs/prod-acme.json
 sudo touch /etc/etraefik/certs/non-prod-acme.json
 sudo chmod 600 /etc/etraefik/certs/non-prod-acme.json

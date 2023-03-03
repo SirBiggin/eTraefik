@@ -3,7 +3,7 @@ http:
     default-headers:
       headers:
         frameDeny: true
-#        sslRedirect: true
+        sslRedirect: true
         browserXssFilter: true
         contentTypeNosniff: true
         forceSTSHeader: true
@@ -17,10 +17,10 @@ http:
 #        - "192.168.0.0/16"
 #        - "172.0.0.0/8"
 
-#    https_redirect:
-#      redirectScheme:
-#        scheme: https
-#        permanent: true
+    https-redirect:
+      redirectScheme:
+        scheme: https
+        permanent: true
         
     log4shell:
       plugin:
@@ -38,7 +38,7 @@ http:
       chain:
         middlewares:
 #        - default-whitelist
-#        - default-headers
+        - default-headers
         - log4shell
         - torblock
 #        - https_redirect

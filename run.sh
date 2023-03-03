@@ -1,3 +1,2 @@
 #!/bin/bash
-cd /etc/etraefik/
-./traefik --configFile=traefik.yml
+./etc/etraefik/traefik --configFile=/etc/etraefik/traefik.yml

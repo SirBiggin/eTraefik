@@ -4,29 +4,18 @@ http:
 
     to-jellyfin-Coitus-secure:
       entryPoints:
-        - web
-        - websecure
+       - websecure
       rule: "Host(`jellyfin.coitus.io`)"
       middlewares:
-        - secured@file
+       - secured@file
+       - https-redirect@file
       service: jellyfin
-#      tls:
-#        certResolver: staging
-
-    to-jellyfin-Coitus-Local-secure:
-      entryPoints:
-        - web
-        - websecure
-      rule: "Host(`jellyfin.coitus.local`)"
-      middlewares:
-        - secured@file
-      service: jellyfin
-#      tls:
-#        certResolver: staging
-
+      tls:
+        certResolver: staging
 
   services:
     jellyfin:
       loadBalancer:
         servers:
           - url: http://10.0.1.6:8096
+          
